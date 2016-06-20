@@ -1,5 +1,5 @@
 <?php
-
+// This function minifies the actual html code.
 function sanitize_output($buffer) {
     $search = array(
         '/\>[^\S ]+/s',  // strip whitespaces after tags, except space
@@ -15,6 +15,7 @@ function sanitize_output($buffer) {
     return $buffer;
 }
 
+// This function will create a html file that contains the minified code.
 function create($source){
 $index = fopen("index.html", "w");
 fwrite($index, $source);
