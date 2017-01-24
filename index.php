@@ -32,7 +32,7 @@ else {
 $html = file_get_contents('http://mihaigabriel.eu');
 //$html = htmlspecialchars($html, ENT_QUOTES);
 $html = sanitize_output($html);
-//echo '<pre>'.trim($html).'</pre>';
+echo '<pre>'.trim($html).'</pre>';
 create($html);
 
 
